@@ -577,3 +577,27 @@ dl.tabs dd.active {
 input[type=search] {
 	margin-top: 25px;
 }
+
+.login-form {
+	width:250px;
+	padding:10px;
+  background:#222222;
+}
+
+.login_input {
+  margin:0px;
+}
+
+.login_label {
+  font-size:20px;
+  color:white;
+  margin:0px;
+}
+
+.login_button {
+	float:right;
+  background-color:gray;
+  height:30px;
+  width:80px;
+  border:2px solid black;
+}

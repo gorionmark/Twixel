@@ -1,8 +1,4 @@
-  <?php
-
-
-
-  ?>
+<?php include('check_login.php') ?>
 <!DOCTYPE html>
 
 <!-- USED FOUNDATION HTML5 FRONT-END FRAMEWORK -->
@@ -42,55 +38,7 @@
 <body>
   
   <!-- Header and Nav -->
-  
-  <nav class="top-bar contain-to-grid">
-    
-    <ul>
-      <!-- Title Area -->
-      <li>
-      	<a href="home.php"><img src="img/logo.svg" alt="logo" height="40" width="40" /></a>
-      </li>
-      <li class="name">
-      	
-        <h1>
-          <a href="home.php">
-            Twixel
-          </a>
-        </h1>
-      </li>
-    </ul>
-
-    <section>
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li><a href="home.php">Home</a></li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="catalog.php#adobePlugins">Products</a>
-          <ul class="dropdown">
-            <li><a href="catalog.php#adobePlugins">Adobe Plugins</a></li>
-            <li><a href="catalog.php#adobeSoftware">Adobe Software</a></li>
-            <li><a href="catalog.php#mayaPlugins">Maya Plugins</a></li>
-            <li><a href="catalog.php#wordPressThemes">WordPress Themes</a></li>
-            <li><a href="catalog.php#webAssets">Web Assets</a></li>
-            <li><a href="catalog.php#sonySoftware">Sony Software</a></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="client.php">Account</a>
-          <ul class="dropdown">
-            <li><a href="client.php">Account Information</a></li>
-            <li><a href="client.php#openOrders">Open Orders</a></li>
-            <li><a href="client.php#pastOrders">Past Orders</a></li>
-          </ul>
-        <li class="divider"></li>
-        <li><a href="cart.php">Cart (0)</a></li>
-      </ul>
-    </section>
-  </nav>
-
+  <?php include('header.php') ?>
   <!-- End Header and Nav -->
 
   <!-- First Band (Slider) -->
@@ -115,14 +63,14 @@
     <div class="six columns">
       <div>
         <?php
-          $dbhost = 'sulley.cah.ucf.edu';
-          $dbuser = 'za086324';
-          $dbpass = 'surfzap123';
+          $dbhost = 'localhost';
+          $dbuser = 'gr073607';
+          $dbpass = 'knights123!';
           $conn = mysql_connect($dbhost, $dbuser, $dbpass);
           if(! $conn ){
             die('Could not connect: ' . mysql_error());
           }
-          $sql = 'SELECT productImage, productName, price, description FROM products WHERE productID = "1" ';
+          $sql = 'SELECT image, name, price, description FROM products WHERE id = "1" ';
 
           mysql_select_db('za086324');
           $retval = mysql_query( $sql, $conn );
@@ -131,8 +79,8 @@
           }
           while($row = mysql_fetch_array($retval, MYSQL_ASSOC)){
               echo 
-                 "<a href='catalog.php' ><img alt='featuredProduct' src='{$row['productImage']}' /></a>".
-                 "<h4>{$row['productName']} only \${$row['price']}</h4>".
+                 "<a href='catalog.php' ><img alt='featuredProduct' src='{$row['image']}' /></a>".
+                 "<h4>{$row['name']} only \${$row['price']}</h4>".
                  "<p>{$row['description']} </p> ";
           }
           mysql_close($conn);
@@ -143,14 +91,14 @@
     <div class="six columns">
       <div>
         <?php
-          $dbhost = 'sulley.cah.ucf.edu';
-          $dbuser = 'za086324';
-          $dbpass = 'surfzap123';
+          $dbhost = 'localhost';
+          $dbuser = 'gr073607';
+          $dbpass = 'knights123!';
           $conn = mysql_connect($dbhost, $dbuser, $dbpass);
           if(! $conn ){
             die('Could not connect: ' . mysql_error());
           }
-          $sql = 'SELECT productImage, productName, price, description FROM products WHERE productID = "2" ';
+          $sql = 'SELECT image, name, price, description FROM products WHERE id = "2" ';
 
           mysql_select_db('za086324');
           $retval = mysql_query( $sql, $conn );
@@ -159,8 +107,8 @@
           }
           while($row = mysql_fetch_array($retval, MYSQL_ASSOC)){
               echo 
-                 "<a href='catalog.php' ><img alt='featuredProduct' src='{$row['productImage']}' /></a>".
-                 "<h4>{$row['productName']} only \${$row['price']}</h4>".
+                 "<a href='catalog.php' ><img alt='featuredProduct' src='{$row['image']}' /></a>".
+                 "<h4>{$row['name']} only \${$row['price']}</h4>".
                  "<p>{$row['description']} </p> ";
           }
           mysql_close($conn);
@@ -226,27 +174,7 @@
   
   
   <!-- Footer -->
-  
-  <footer class="row">
-    <div class="twelve columns">
-      <hr />
-      <div class="row">
-        <div class="six columns">
-          <p>This site is not official and is an assignment for a UCF Digital Media course
-            <br />Designed By: Zachary Spear</p>
-        </div>
-        <div class="six columns">
-          <ul class="link-list right">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="catalog.php">Products</a></li>
-            <li><a href="client.php">Account</a></li>
-            <li><a href="cart.php">Cart (0)</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> 
-  </footer>
+  <?php include('footer.php') ?>
   
   <!-- Included JS Files (Uncompressed) -->
   <!--

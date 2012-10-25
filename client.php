@@ -1,8 +1,4 @@
-<?php
-
-
-
-?>
+<?php include('check_login.php') ?>
 <!DOCTYPE html>
 
 <!-- USED FOUNDATION HTML5 FRONT-END FRAMEWORK -->
@@ -40,55 +36,7 @@
 <body>
   
   <!-- Header and Nav -->
-  
-  <nav class="top-bar contain-to-grid">
-    
-    <ul>
-      <!-- Title Area -->
-      <li>
-      	<a href="home.php"><img src="img/logo.svg" alt="logo" height="40" width="40" /></a>
-      </li>
-      <li class="name">
-      	
-        <h1>
-          <a href="home.php">
-            Twixel
-          </a>
-        </h1>
-      </li>
-    </ul>
-
-    <section>
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li><a href="home.php">Home</a></li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="catalog.php#adobePlugins">Products</a>
-          <ul class="dropdown">
-            <li><a href="catalog.php#adobePlugins">Adobe Plugins</a></li>
-            <li><a href="catalog.php#adobeSoftware">Adobe Software</a></li>
-            <li><a href="catalog.php#mayaPlugins">Maya Plugins</a></li>
-            <li><a href="catalog.php#wordPressThemes">WordPress Themes</a></li>
-            <li><a href="catalog.php#webAssets">Web Assets</a></li>
-            <li><a href="catalog.php#sonySoftware">Sony Software</a></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="client.php">Account</a>
-          <ul class="dropdown">
-            <li><a href="client.php">Account Information</a></li>
-            <li><a href="client.php#openOrders">Open Orders</a></li>
-            <li><a href="client.php#pastOrders">Past Orders</a></li>
-          </ul>
-        <li class="divider"></li>
-        <li><a href="cart.php">Cart (0)</a></li>
-      </ul>
-    </section>
-  </nav>
-  
+  <?php include('header.php') ?>
   <!-- End Header and Nav -->
   <?php
 
@@ -115,12 +63,14 @@
 
       <ul class="tabs-content">
         <li class="active" id="accountInfoTab">
-          <p>Once logged in your information will show up here.
-          <h4>Name</h4>
-          <h4>Email Address</h4>
-          <h4>Address</h4>
+		  <?php
+			print "
+          		<h4>".$first_name." ".$last_name."</h4>
+          		<h4>".$email."</h4>
+              <h4>".$address."</h4>
+              <h4>".$city." ".$state." ".$zip."</h4>";
+		  ?>
           <div>
-            <p>If signed in as an Admin an option will appear for the admin view in the Account settings</p>
             <p><a href="admin.php">Admin Page</a></p>
           </div>
         </li>
@@ -154,27 +104,7 @@
   
   
   <!-- Footer -->
-  
-  <footer class="row">
-    <div class="twelve columns">
-      <hr />
-      <div class="row">
-        <div class="six columns">
-          <p>This site is not official and is an assignment for a UCF Digital Media course
-            <br />Designed By: Zachary Spear</p>
-        </div>
-        <div class="six columns">
-          <ul class="link-list right">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="catalog.php">Products</a></li>
-            <li><a href="client.php">Account</a></li>
-            <li><a href="cart.php">Cart (0)</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> 
-  </footer>
+  <?php include('footer.php') ?>
   
   <!-- Included JS Files (Uncompressed) -->
   <!--
