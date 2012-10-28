@@ -1,45 +1,8 @@
-<?php include('check_login.php') ?>
-<!DOCTYPE html>
+<?php 
+  include 'includes/header.php';
+?>
 
-<!-- USED FOUNDATION HTML5 FRONT-END FRAMEWORK -->
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-
-  <title>Twixel Contact - Zachary Spear</title>
-  
-  <!-- IMPORT CSS -->
-  
-  <style type="text/css">
-  	@import url("css/foundation.min.css");
-	@import url("css/styles.css");
-  </style>
-
-  <link rel="icon" type="image/ico" href="favicon.ico" />
-
-  <script src="js/modernizr.foundation.js"></script>
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-</head>
-<body>
-  
-  <!-- Header and Nav -->
-  <?php include('header.php') ?>
-  <!-- End Header and Nav -->
-
-  <!-- Main Page Content and Sidebar -->
+<!-- Main Page Content and Sidebar -->
 
  <div class="row">
     <div class="nine columns">
@@ -85,11 +48,11 @@
 
         <li id="contactPeopleTab">
           <ul class="block-grid five-up">
-            <li><a href="mailto:yler.berry@knights.ucf.edu"><img src="img/contactImg/kyler.jpg" alt="kyler" /><br />Kyler Berry</a></li>
-            <li><a href="mailto:mark_gorion@knights.ucf.edu"><img src="img/contactImg/mark.jpg" alt="mark" /><br />Mark Gorion</a></li>
-            <li><a href="mailto:fmurrugarra@knights.ucf.edu"><img src="img/contactImg/fernando.jpg" alt="fernando" /><br />Fernando Murrugarra</a></li>
-            <li><a href="mailto:spearzachary@gmail.com"><img src="img/contactImg/zack.jpg" alt="zack" /><br />Zack Spear</a></li>
-            <li><a href="mailto:gzanmiller@knights.ucf.edu"><img src="img/contactImg/greg.jpg" alt="greg" /><br />Greg Zanmiller</a></li>
+            <li><a href="mailto:yler.berry@knights.ucf.edu"><img src="img/contactImg/kyler.jpg" alt="kyler" /><br />Kyler Berry</a><p>Product Manager</p></li>
+            <li><a href="mailto:mark_gorion@knights.ucf.edu"><img src="img/contactImg/mark.jpg" alt="mark" /><br />Mark Gorion</a><p>Developer</p></li>
+            <li><a href="mailto:fmurrugarra@knights.ucf.edu"><img src="img/contactImg/fernando.jpg" alt="fernando" /><br />Fernando Murrugarra</a><p>User Testing</p></li>
+            <li><a href="mailto:spearzachary@gmail.com"><img src="img/contactImg/zack.jpg" alt="zack" /><br />Zack Spear</a><p>Lead Designer</p></li>
+            <li><a href="mailto:gzanmiller@knights.ucf.edu"><img src="img/contactImg/greg.jpg" alt="greg" /><br />Greg Zanmiller</a><p>Lead Developer</p></li>
           </ul>
         </li>
       </ul>
@@ -109,6 +72,7 @@
       </p>
 
       <p>
+        Twixel Inc.<br />
         99 S. Eola Drive<br />
         Orlando, FL 32801
       </p>

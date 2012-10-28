@@ -4,7 +4,7 @@
       <div class="row">
         <div class="six columns">
           <p>This site is not official and is an assignment for a UCF Digital Media course
-            <br />Designed By: Zachary Spear</p>
+            <br />Designed By: Group 5, Twixel Inc.</p>
         </div>
         <div class="six columns">
           <ul class="link-list right">

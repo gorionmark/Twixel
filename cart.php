@@ -1,47 +1,7 @@
-<?php include('check_login.php') ?>
-<!DOCTYPE html>
+<?php 
+  include 'includes/header.php';
+?>
 
-<!-- USED FOUNDATION HTML5 FRONT-END FRAMEWORK -->
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-
-  <title>Twixel Cart - Zachary Spear</title>
-  
-  <!-- IMPORT CSS -->
-  
-  <style type="text/css">
-  	@import url("css/foundation.min.css");
-	@import url("css/styles.css");
-  </style>
-  <link rel="icon" type="image/ico" href="favicon.ico" />
-
-  <script src="js/modernizr.foundation.js"></script>
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-</head>
-<body>
-  
-  <!-- Header and Nav -->
-  <?php include('header.php') ?>
-  <!-- End Header and Nav -->
-  <?php
-
-
-
-  ?>
   <!-- First Band (Slider) -->
   <!-- The Orbit slider is initialized at the bottom of the page by calling .orbit() on #slider -->
 

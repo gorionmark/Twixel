@@ -1,48 +1,7 @@
-<?php include('check_login.php') ?>
-<!DOCTYPE html>
+<?php 
+  include 'includes/header.php';
+?>
 
-<!-- USED FOUNDATION HTML5 FRONT-END FRAMEWORK -->
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-
-  <title>Twixel Catalog - Zachary Spear</title>
-
-  <!-- IMPORT CSS -->
-  
-  <style type="text/css">
-  	@import url("css/foundation.min.css");
-	@import url("css/styles.css");
-  </style>
-
-  <link rel="icon" type="image/ico" href="favicon.ico" />
-
-  <script src="js/modernizr.foundation.js"></script>
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-</head>
-<body>
-  
-  <!-- Header and Nav -->
-  <?php include('header.php') ?>
-  <!-- End Header and Nav -->
-  <?php
-
-
-
-  ?>
   <!-- First Band (Slider) -->
   <!-- The Orbit slider is initialized at the bottom of the page by calling .orbit() on #slider -->
   
@@ -73,12 +32,13 @@
     <div class="twelve columns">
       <h3>Product Categories</h3>
       <dl class="tabs">
-        <dd class="active"><a href="#adobePlugins">Adobe Plugins</a></dd>
-        <dd><a href="#adobeSoftware">Adobe Software</a></dd>
-        <dd><a href="#mayaPlugins">Maya Plugins</a></dd>
-        <dd><a href="#wordPressThemes">WordPress Themes</a></dd>
-        <dd><a href="#webAssets">Web Assets</a></dd>
-        <dd><a href="#sonySoftware">Sony Software</a></dd>
+        <dd class="active"><a href="#adobePlugins">Plugins</a></dd>
+        <dd><a href="#designSoftware">Design Software</a></dd>
+        <dd><a href="#audioRecording">Audio Recording</a></dd>
+        <dd><a href="#hardware">Hardware</a></dd>
+        <dd><a href="#webDevelopment">Web Development</a></dd>
+        <dd><a href="#videoEditing">Video Editing</a></dd>
+        <dd><a href="#wordpressThemes">Wordpress Themes</a></dd>
       </dl>
 
       <ul class="tabs-content">
@@ -219,19 +179,22 @@
           
           </div>
         </li>
-        <li id="adobeSoftwareTab">
+        <li id="designSoftwareTab">
           <h3>Coming Soon</h3>
         </li>
-        <li id="mayaPluginsTab">
+        <li id="audioRecordingTab">
           <h3>Coming Soon</h3>
         </li>
-        <li id="wordPressThemesTab">
+        <li id="hardwareTab">
           <h3>Coming Soon</h3>
         </li>
-        <li id="webAssetsTab">
+        <li id="webDevelopmentTab">
           <h3>Coming Soon</h3>
         </li>
-        <li id="sonySoftwareTab">
+        <li id="videoEditingTab">
+          <h3>Coming Soon</h3>
+        </li>
+        <li id="wordpressThemesTab">
           <h3>Coming Soon</h3>
         </li>
       </ul>

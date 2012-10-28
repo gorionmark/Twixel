@@ -1,8 +1,3 @@
-  <?php
-
-
-
-  ?>
 <!DOCTYPE html>
 
 <!-- USED FOUNDATION HTML5 FRONT-END FRAMEWORK -->
