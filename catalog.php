@@ -43,159 +43,253 @@
 
       <ul class="tabs-content">
         <li class="active" id="adobePluginsTab">
-          <div class="row">
 
-            <div class="four columns">
-              <img src="img/productImages/flares03.png" width="400" height="300" alt="flares" />
-              <h4>Lens Flares</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$199.99</h5>
-              <p>Create lens flares right in After Effects, Photoshop, Premiere with our simple yet powerful plugin.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-            
-            <div class="four columns">
-              <img src="img/productImages/3dModel03.png" width="400" height="300" alt="3d" />
-              <h4>3D Elements</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$399.99</h5>
-              <p>Incorporate your 3D .obj models into your After Effects compositions right inside After Effects. No need to composite in an outside program. 
-                With this great plugin you will be able to create awesome cinematic effects all in one program.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
+          <?php
+            $dbhost = 'localhost';
+            $dbuser = 'gr073607';
+            $dbpass = 'knights123!';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            if(! $conn ){
+              die('Could not connect: ' . mysql_error());
+            }
 
-            </div>
-            
-            <div class="four columns">
-              <img src="img/productImages/particles03.png" width="400" height="300" alt="particles" />
-              <h4>Particles</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$199.99</h5>
-              <p>Easily create particles right in After Effects. Need snow in your footage but live in Florida? Then this plugin is for you.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
+            $sql = 'SELECT * FROM products WHERE category = "plugin" ';
 
-            </div>
-            
-          </div>
-          <div class="row">
+            $retval = mysql_query( $sql, $conn );
+            if(! $retval ){
+              die('Could not get data: ' . mysql_error());
+            }
+            while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+            {
+                $name = $row['name'];
+                $description = $row['description'];
+                $price = $row['price'];
+                $image = $row['image'];
 
-            <div class="four columns">
-              <img src="img/productImages/soundSync03.png" width="400" height="300" alt="soundSync" />
-              <h4>Sound Sync</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$299.99</h5>
-              <p>Create keyframes from audio right in After Effects with our easy to use plugin.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-            
-            <div class="four columns">
-              <img src="img/productImages/slowMotion03.png" width="400" height="300"  alt="slowMo" />
-              <h4>Slow Motion</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$399.99</h5>
-              <p>Slow down 60FPS (frames per second) footage up to 1000FPS with ease.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-            
-            <div class="four columns">
-              <img src="img/productImages/color03.png" width="400" height="300"  alt="colorGrade" />
-              <h4>Color Grading</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$199.99</h5>
-              <p>Make your projects pop with that extra color.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-          
-          </div>
-          <div class="row">
-
-            <div class="four columns">
-              <img src="img/productImages/text03.png" width="400" height="300"  alt="textEffects" />
-              <h4>Automated Text Effects</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$199.99</h5>
-              <p>Stylize your text with some automated effects or build your own with our easy to use tool.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-            
-            <div class="four columns">
-              <img src="img/productImages/composite03.png" width="400" height="300"  alt="easyComposite" />
-              <h4>Easy Composite</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$399.99</h5>
-              <p>Fix jagged edges and incorporate foreign 3d objects into your footage. You can even add shadows.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-            
-            <div class="four columns">
-              <img src="img/productImages/sdToHD03.png" width="400" height="300"  alt="sdToHD" />
-              <h4>SD to HD</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$299.99</h5>
-              <p>Convert your ugly standar definition footage into beautfil high definition.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-          
-          </div>
-          <div class="row">
-
-            <div class="four columns">
-              <img src="img/productImages/denoise03.png" width="400" height="300"  alt="denoise" />
-              <h4>Denoiser</h4>
-              <a href="#" class="radius button right">Add to Cart</a>
-              <h5>$299.99</h5>
-              <p>Did you shoot footage at night and didn't have enough lighting so you bumped up your camera's ISO? Well fix the noise the it created with this built-in plugin.</p>
-              <div class="rating">
-                0<i class="foundicon-thumb-up"></i>
-                0<i class="foundicon-thumb-down"></i>
-              </div>
-            </div>
-          
-          </div>
+                print "
+                <div class='four columns catalog_items'>
+                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <h4>".$name."</h4>
+                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <h5>$".$price."</h5>
+                  <p>".$description."</p>
+                  <div class='rating'>
+                    0<i class='foundicon-thumb-up'></i>
+                    0<i class='foundicon-thumb-down'></i>
+                  </div>
+              </div>";
+            }
+          ?>
         </li>
         <li id="designSoftwareTab">
-          <h3>Coming Soon</h3>
+          <?php
+
+            $dbhost = 'localhost';
+            $dbuser = 'gr073607';
+            $dbpass = 'knights123!';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $sql = 'SELECT * FROM products WHERE category = "design_software" ';
+
+            $retval = mysql_query( $sql, $conn );
+            if(! $retval ){
+              die('Could not get data: ' . mysql_error());
+            }
+            while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+            {
+                $name = $row['name'];
+                $description = $row['description'];
+                $price = $row['price'];
+                $image = $row['image'];
+
+                print "
+                <div class='four columns'>
+                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <h4>".$name."</h4>
+                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <h5>$".$price."</h5>
+                  <p>".$description."</p>
+                  <div class='rating'>
+                    0<i class='foundicon-thumb-up'></i>
+                    0<i class='foundicon-thumb-down'></i>
+                  </div>
+              </div>";
+            }
+          ?>
         </li>
         <li id="audioRecordingTab">
-          <h3>Coming Soon</h3>
+          <?php
+          
+            $dbhost = 'localhost';
+            $dbuser = 'gr073607';
+            $dbpass = 'knights123!';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $sql = 'SELECT * FROM products WHERE category = "audio_recording" ';
+
+            $retval = mysql_query( $sql, $conn );
+            if(! $retval ){
+              die('Could not get data: ' . mysql_error());
+            }
+            while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+            {
+                $name = $row['name'];
+                $description = $row['description'];
+                $price = $row['price'];
+                $image = $row['image'];
+
+                print "
+                <div class='four columns'>
+                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <h4>".$name."</h4>
+                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <h5>$".$price."</h5>
+                  <p>".$description."</p>
+                  <div class='rating'>
+                    0<i class='foundicon-thumb-up'></i>
+                    0<i class='foundicon-thumb-down'></i>
+                  </div>
+              </div>";
+            }
+          ?>
         </li>
         <li id="hardwareTab">
-          <h3>Coming Soon</h3>
+          <?php
+          
+            $dbhost = 'localhost';
+            $dbuser = 'gr073607';
+            $dbpass = 'knights123!';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $sql = 'SELECT * FROM products WHERE category = "hardware" ';
+
+            $retval = mysql_query( $sql, $conn );
+            if(! $retval ){
+              die('Could not get data: ' . mysql_error());
+            }
+            while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+            {
+                $name = $row['name'];
+                $description = $row['description'];
+                $price = $row['price'];
+                $image = $row['image'];
+
+                print "
+                <div class='four columns'>
+                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <h4>".$name."</h4>
+                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <h5>$".$price."</h5>
+                  <p>".$description."</p>
+                  <div class='rating'>
+                    0<i class='foundicon-thumb-up'></i>
+                    0<i class='foundicon-thumb-down'></i>
+                  </div>
+              </div>";
+            }
+          ?>
         </li>
         <li id="webDevelopmentTab">
-          <h3>Coming Soon</h3>
+          <?php
+          
+            $dbhost = 'localhost';
+            $dbuser = 'gr073607';
+            $dbpass = 'knights123!';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $sql = 'SELECT * FROM products WHERE category = "web_development" ';
+
+            $retval = mysql_query( $sql, $conn );
+            if(! $retval ){
+              die('Could not get data: ' . mysql_error());
+            }
+            while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+            {
+                $name = $row['name'];
+                $description = $row['description'];
+                $price = $row['price'];
+                $image = $row['image'];
+
+                print "
+                <div class='four columns'>
+                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <h4>".$name."</h4>
+                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <h5>$".$price."</h5>
+                  <p>".$description."</p>
+                  <div class='rating'>
+                    0<i class='foundicon-thumb-up'></i>
+                    0<i class='foundicon-thumb-down'></i>
+                  </div>
+              </div>";
+            }
+          ?>
         </li>
         <li id="videoEditingTab">
-          <h3>Coming Soon</h3>
+          <?php
+          
+            $dbhost = 'localhost';
+            $dbuser = 'gr073607';
+            $dbpass = 'knights123!';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $sql = 'SELECT * FROM products WHERE category = "video_editing" ';
+
+            $retval = mysql_query( $sql, $conn );
+            if(! $retval ){
+              die('Could not get data: ' . mysql_error());
+            }
+            while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+            {
+                $name = $row['name'];
+                $description = $row['description'];
+                $price = $row['price'];
+                $image = $row['image'];
+
+                print "
+                <div class='four columns'>
+                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <h4>".$name."</h4>
+                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <h5>$".$price."</h5>
+                  <p>".$description."</p>
+                  <div class='rating'>
+                    0<i class='foundicon-thumb-up'></i>
+                    0<i class='foundicon-thumb-down'></i>
+                  </div>
+              </div>";
+            }
+          ?>
         </li>
         <li id="wordpressThemesTab">
-          <h3>Coming Soon</h3>
+          <?php
+          
+            $dbhost = 'localhost';
+            $dbuser = 'gr073607';
+            $dbpass = 'knights123!';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $sql = 'SELECT * FROM products WHERE category = "wordpress_themes" ';
+
+            $retval = mysql_query( $sql, $conn );
+            if(! $retval ){
+              die('Could not get data: ' . mysql_error());
+            }
+            while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+            {
+                $name = $row['name'];
+                $description = $row['description'];
+                $price = $row['price'];
+                $image = $row['image'];
+
+                print "
+                <div class='four columns'>
+                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <h4>".$name."</h4>
+                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <h5>$".$price."</h5>
+                  <p>".$description."</p>
+                  <div class='rating'>
+                    0<i class='foundicon-thumb-up'></i>
+                    0<i class='foundicon-thumb-down'></i>
+                  </div>
+              </div>";
+            }
+          ?>
         </li>
       </ul>
     </div>

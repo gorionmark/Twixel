@@ -30,7 +30,6 @@
             }
             $sql = 'SELECT image, name, price, description FROM products WHERE id = "1" ';
 
-            mysql_select_db('za086324');
             $retval = mysql_query( $sql, $conn );
             if(! $retval ){
               die('Could not get data: ' . mysql_error());
@@ -49,16 +48,9 @@
       <div class="six columns">
         <div>
           <?php
-            $dbhost = 'localhost';
-            $dbuser = 'gr073607';
-            $dbpass = 'knights123!';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-            if(! $conn ){
-              die('Could not connect: ' . mysql_error());
-            }
+
             $sql = 'SELECT image, name, price, description FROM products WHERE id = "2" ';
 
-            mysql_select_db('za086324');
             $retval = mysql_query( $sql, $conn );
             if(! $retval ){
               die('Could not get data: ' . mysql_error());
