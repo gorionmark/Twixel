@@ -61,11 +61,12 @@ include('includes/mysql_connect.php');
           <a href="catalog.php#adobePlugins">Products</a>
           <ul class="dropdown">
             <li><a href="catalog.php#adobePlugins">Adobe Plugins</a></li>
-            <li><a href="catalog.php#adobeSoftware">Adobe Software</a></li>
-            <li><a href="catalog.php#mayaPlugins">Maya Plugins</a></li>
-            <li><a href="catalog.php#wordPressThemes">WordPress Themes</a></li>
-            <li><a href="catalog.php#webAssets">Web Assets</a></li>
-            <li><a href="catalog.php#sonySoftware">Sony Software</a></li>
+            <li><a href="catalog.php#designSoftware">Design Software</a></li>
+            <li><a href="catalog.php#audioRecording">Audio Recording</a></li>
+            <li><a href="catalog.php#hardware">Hardware</a></li>
+            <li><a href="catalog.php#webDevelopment">Web Development</a></li>
+            <li><a href="catalog.php#videoEditing">Video Editing</a></li>
+            <li><a href="catalog.php#wordpressThemes">Wordpress Themes</a></li>
           </ul>
         </li>
         <?php

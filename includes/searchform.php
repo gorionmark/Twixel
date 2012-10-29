@@ -17,10 +17,10 @@
 		$search=$_POST['search'];
 		echo "You Searched for '$search'";
 
-		if(preg_match("/^[A-Z|a-z]+/",$search)) 
+		if(preg_match("/^[0-9][A-Z|a-z]+/",$search)) 
 		{
 			
-			$query="SELECT id FROM products WHERE  name LIKE '%" .$search. "%'";
+			$query="SELECT id FROM products WHERE category <> 'featured' AND name LIKE '%" .$search. "%'";
 			$result=mysql_query($query); 
 
 			if(! $result )
@@ -29,7 +29,7 @@
 	        }
 
 			while($row=mysql_fetch_array($result)){ 
-		        $optionID=$row['option_id']; 
+		        $optionID=$row['id']; 
 				//-display the result of the array 
 
 				echo "<ul>"; 

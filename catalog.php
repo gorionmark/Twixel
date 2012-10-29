@@ -45,6 +45,7 @@
         <li class="active" id="adobePluginsTab">
 
           <?php
+            $counter = 0;
             $dbhost = 'localhost';
             $dbuser = 'gr073607';
             $dbpass = 'knights123!';
@@ -66,6 +67,11 @@
                 $price = $row['price'];
                 $image = $row['image'];
 
+                if($counter == 0)
+                {
+                  print "<div class='row'>";
+                }
+
                 print "
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
@@ -77,17 +83,22 @@
                     0<i class='foundicon-thumb-up'></i>
                     0<i class='foundicon-thumb-down'></i>
                   </div>
-              </div>";
+                </div>";
+
+              $counter++;
+
+              if($counter == 3) 
+              {
+                print "</div>";
+                $counter = 0;
+              }
             }
           ?>
         </li>
         <li id="designSoftwareTab">
           <?php
-
-            $dbhost = 'localhost';
-            $dbuser = 'gr073607';
-            $dbpass = 'knights123!';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            
+            $counter = 0;
             $sql = 'SELECT * FROM products WHERE category = "design_software" ';
 
             $retval = mysql_query( $sql, $conn );
@@ -101,8 +112,13 @@
                 $price = $row['price'];
                 $image = $row['image'];
 
+                if($counter == 0)
+                {
+                  print "<div class='row'>";
+                }
+
                 print "
-                <div class='four columns'>
+                <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
                   <a href='#' class='radius button right'>Add to Cart</a>
@@ -112,17 +128,22 @@
                     0<i class='foundicon-thumb-up'></i>
                     0<i class='foundicon-thumb-down'></i>
                   </div>
-              </div>";
+                </div>";
+
+              $counter++;
+
+              if($counter == 3) 
+              {
+                print "</div>";
+                $counter = 0;
+              }
             }
           ?>
         </li>
         <li id="audioRecordingTab">
           <?php
-          
-            $dbhost = 'localhost';
-            $dbuser = 'gr073607';
-            $dbpass = 'knights123!';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            
+            $counter = 0;
             $sql = 'SELECT * FROM products WHERE category = "audio_recording" ';
 
             $retval = mysql_query( $sql, $conn );
@@ -136,8 +157,13 @@
                 $price = $row['price'];
                 $image = $row['image'];
 
+                if($counter == 0)
+                {
+                  print "<div class='row'>";
+                }
+
                 print "
-                <div class='four columns'>
+                <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
                   <a href='#' class='radius button right'>Add to Cart</a>
@@ -147,17 +173,21 @@
                     0<i class='foundicon-thumb-up'></i>
                     0<i class='foundicon-thumb-down'></i>
                   </div>
-              </div>";
+                </div>";
+
+              $counter++;
+
+              if($counter == 3) 
+              {
+                print "</div>";
+                $counter = 0;
+              }
             }
           ?>
         </li>
         <li id="hardwareTab">
           <?php
-          
-            $dbhost = 'localhost';
-            $dbuser = 'gr073607';
-            $dbpass = 'knights123!';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $counter = 0;
             $sql = 'SELECT * FROM products WHERE category = "hardware" ';
 
             $retval = mysql_query( $sql, $conn );
@@ -171,8 +201,13 @@
                 $price = $row['price'];
                 $image = $row['image'];
 
+                if($counter == 0)
+                {
+                  print "<div class='row'>";
+                }
+
                 print "
-                <div class='four columns'>
+                <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
                   <a href='#' class='radius button right'>Add to Cart</a>
@@ -182,17 +217,21 @@
                     0<i class='foundicon-thumb-up'></i>
                     0<i class='foundicon-thumb-down'></i>
                   </div>
-              </div>";
+                </div>";
+
+              $counter++;
+
+              if($counter == 3) 
+              {
+                print "</div>";
+                $counter = 0;
+              }
             }
           ?>
         </li>
         <li id="webDevelopmentTab">
           <?php
-          
-            $dbhost = 'localhost';
-            $dbuser = 'gr073607';
-            $dbpass = 'knights123!';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $counter = 0;
             $sql = 'SELECT * FROM products WHERE category = "web_development" ';
 
             $retval = mysql_query( $sql, $conn );
@@ -206,8 +245,13 @@
                 $price = $row['price'];
                 $image = $row['image'];
 
+                if($counter == 0)
+                {
+                  print "<div class='row'>";
+                }
+
                 print "
-                <div class='four columns'>
+                <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
                   <a href='#' class='radius button right'>Add to Cart</a>
@@ -217,17 +261,21 @@
                     0<i class='foundicon-thumb-up'></i>
                     0<i class='foundicon-thumb-down'></i>
                   </div>
-              </div>";
+                </div>";
+
+              $counter++;
+
+              if($counter == 3) 
+              {
+                print "</div>";
+                $counter = 0;
+              }
             }
           ?>
         </li>
         <li id="videoEditingTab">
           <?php
-          
-            $dbhost = 'localhost';
-            $dbuser = 'gr073607';
-            $dbpass = 'knights123!';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $counter = 0;
             $sql = 'SELECT * FROM products WHERE category = "video_editing" ';
 
             $retval = mysql_query( $sql, $conn );
@@ -241,8 +289,13 @@
                 $price = $row['price'];
                 $image = $row['image'];
 
+                if($counter == 0)
+                {
+                  print "<div class='row'>";
+                }
+
                 print "
-                <div class='four columns'>
+                <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
                   <a href='#' class='radius button right'>Add to Cart</a>
@@ -252,17 +305,21 @@
                     0<i class='foundicon-thumb-up'></i>
                     0<i class='foundicon-thumb-down'></i>
                   </div>
-              </div>";
+                </div>";
+
+              $counter++;
+
+              if($counter == 3) 
+              {
+                print "</div>";
+                $counter = 0;
+              }
             }
           ?>
         </li>
         <li id="wordpressThemesTab">
           <?php
-          
-            $dbhost = 'localhost';
-            $dbuser = 'gr073607';
-            $dbpass = 'knights123!';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+            $counter = 0;
             $sql = 'SELECT * FROM products WHERE category = "wordpress_themes" ';
 
             $retval = mysql_query( $sql, $conn );
@@ -276,8 +333,13 @@
                 $price = $row['price'];
                 $image = $row['image'];
 
+                if($counter == 0)
+                {
+                  print "<div class='row'>";
+                }
+
                 print "
-                <div class='four columns'>
+                <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
                   <a href='#' class='radius button right'>Add to Cart</a>
@@ -287,7 +349,15 @@
                     0<i class='foundicon-thumb-up'></i>
                     0<i class='foundicon-thumb-down'></i>
                   </div>
-              </div>";
+                </div>";
+
+              $counter++;
+
+              if($counter == 3) 
+              {
+                print "</div>";
+                $counter = 0;
+              }
             }
           ?>
         </li>
