@@ -37,6 +37,7 @@ include('includes/mysql_connect.php');
   <link rel="icon" type="image/ico" href="favicon.ico" />
 
   <script src="js/modernizr.foundation.js"></script>
+  <script src="js/custom.js"></script>
 
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
@@ -77,12 +78,10 @@ include('includes/mysql_connect.php');
                       <ul class='dropdown'>
                         <li>
                           <form method='post' action='signin.php' class='login-form'>
-                            <label class='login_label' for='login_input_email'>Email: </label>
-                            <input type='text' name='login_input_email' id='login_input_email' class='login_box' />
-
-                            <label class='login_label' for='login_input_password'>Password: </label>
-                            <input type='password' name='login_input_password' id='login_input_password' class='login_box' />
+                            <input type='text' name='login_input_email' placeholder='Email' />
+                            <input type='password' name='login_input_password' placeholder='Password' />
                             <input type='submit' value='Submit' class='login_button' />
+                            <a href='#' id='signup_link'>Sign up now!</a>
                           </form>
                         </li>
                       </ul>

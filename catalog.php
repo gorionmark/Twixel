@@ -62,10 +62,13 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $id = $row['id'];
                 $name = $row['name'];
                 $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
+                $thumbs_up = $row['thumbs_up'];
+                $thumbs_down = $row['thumbs_down'];
 
                 if($counter == 0)
                 {
@@ -80,8 +83,8 @@
                   <h5>$".$price."</h5>
                   <p>".$description."</p>
                   <div class='rating'>
-                    0<i class='foundicon-thumb-up'></i>
-                    0<i class='foundicon-thumb-down'></i>
+                    <a href='#'>".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a href='#'>".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
