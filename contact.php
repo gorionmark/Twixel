@@ -3,7 +3,7 @@
 ?>
 
 <!-- Main Page Content and Sidebar -->
-
+<div class="spacer"></div>
  <div class="row">
     <div class="nine columns">
       <h1>Contact</h1>

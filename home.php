@@ -1,7 +1,7 @@
 <?php 
   include 'includes/header.php';
 ?>
-
+    <div class="spacer"></div>
     <div class="row">
       <div class="nine columns">
         <h1>Home</h1>

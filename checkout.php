@@ -1,7 +1,7 @@
 <?php 
   include 'includes/header.php';
 ?>
-
+  <div class="spacer"></div>
   <!-- First Band (Slider) -->
   <!-- The Orbit slider is initialized at the bottom of the page by calling .orbit() on #slider -->
   <div class="row">

@@ -4,7 +4,7 @@
 
   <!-- First Band (Slider) -->
   <!-- The Orbit slider is initialized at the bottom of the page by calling .orbit() on #slider -->
-  
+  <div class="spacer"></div>
   <div class="row">
     <div class="nine columns">
       <h1>Products</h1>

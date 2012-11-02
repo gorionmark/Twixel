@@ -1,7 +1,7 @@
 <?php 
   include 'includes/header.php';
 ?>
-
+  <div class="spacer"></div>
   <div class="row">
     <div class="nine_columns">
       <h2 class="policy_header">Shipping Policy</h2>

@@ -25,7 +25,7 @@ include('includes/mysql_connect.php');
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>Twixel Home - Zachary Spear</title>
+  <title>Twixel</title>
   
   <!-- IMPORT CSS -->
   

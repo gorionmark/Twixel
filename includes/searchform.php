@@ -17,7 +17,7 @@
 		$search=$_POST['search'];
 		echo "You Searched for '$search'";
 
-		if(preg_match("/^[0-9][A-Z|a-z]+/",$search)) 
+		if(preg_match("/^[A-Z0-9|a-z]+/",$search)) 
 		{
 			
 			$query="SELECT id FROM products WHERE category <> 'featured' AND name LIKE '%" .$search. "%'";

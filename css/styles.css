@@ -586,6 +586,9 @@ input[type=search] {
 
 .top-bar {
   height:auto;
+  position:fixed;
+  top:0;
+  z-index: 10000;
 }
 
 .top-bar ul {
@@ -606,6 +609,10 @@ input[type=search] {
 
 .top-bar ul.right {
   float:right;
+}
+
+.spacer {
+  margin-bottom:85px;
 }
 
 .login-form {
