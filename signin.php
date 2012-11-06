@@ -4,7 +4,7 @@
 	mysql_select_db("gr073607", $connection)or die("cannot select DB");
 
 	$myusername=$_POST['login_input_email']; 
-	$mypassword=$_POST['login_input_password']; 
+	$mypassword=md5($_POST['login_input_password']); 
 	
 	$myusername = stripslashes($myusername);
 	$mypassword = stripslashes($mypassword);
@@ -25,8 +25,14 @@
 	}
 	else 
 	{
-		$sql="SELECT * FROM users WHERE email='$myusername' and password='$mypassword'";
+		$sql="SELECT password FROM users WHERE email='$myusername'";
 		$result=mysql_query($sql);
+
+		$dbarray = mysql_fetch_array($result);
+
+		if($password == $dbarray['password']) {
+			return 0;
+		}
 		
 		$count=mysql_num_rows($result);
 		

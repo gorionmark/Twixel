@@ -615,24 +615,84 @@ input[type=search] {
   margin-bottom:85px;
 }
 
-.login-form {
-	width:250px;
-	padding:10px;
-  background:#222222;
+.unlinked_button {
+  cursor: pointer;
 }
 
-.login_button {
-	float:left;
-  background-color:gray;
-  height:30px;
-  width:80px;
-  border:2px solid black;
+#signin_form {
+  visibility:hidden;
+  width:250px;
+  padding:10px;
+  background:#222222;
+  padding-right:20px;
+  position:fixed;
+  right:0;
+  top:64px;
+  z-index:1000;
+
 }
 
 #signup_link {
   float:right;
-  margin-top:2px;
-  width:100px;
+  margin-top:12px;
+}
+
+.signup_fieldset {
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+
+#signup_form {
+  visibility: hidden;
+  background-color:#222222;
+  padding:10px;
+  padding-right:20px;
+  width:350px;
+  height:375px;
+  position:fixed;
+  right:0;
+  top:64px;
+  z-index:1000;
+}
+
+.signup_input {
+  height:20px;
+  font-size:16px;
+}
+
+.signup_city {
+  float:left;
+  max-width:150px;
+}
+
+.signup_state {
+  float:left;
+  width:75px;
+  margin-left:10px;
+  border:1px solid black;
+  height:20px;
+}
+
+.signup_zip {
+  float:right;
+  max-width:75px;
+}
+
+.signup_legend {
+  font-size:30px;
+  padding-bottom:20px;
+  color:white;
+  font-family: "wisdom_script_airegular";
+  font-weight:bold;
+}
+
+.signup_cancel {
+  color:white;
+  text-decoration:none;
+  float:right;
+  font-size:15px;
+  margin-top:10px;
 }
 
 #terms {
