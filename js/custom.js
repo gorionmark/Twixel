@@ -119,3 +119,15 @@ function validateData(name) {
 		}
 	}
 }
+
+function show_user_form ()
+{
+	document.getElementById("edit_user_form").style.visibility = 'visible';
+	document.select_user_update.submit();
+	show_user_delete_form();
+}
+
+function show_user_delete_form() 
+{
+	document.getElementById("delete_user_form").style.visibility = 'visible';
+}

@@ -101,92 +101,91 @@ include('includes/mysql_connect.php');
       <div class="clear"></div>
   </nav>
 
-  <div id="signin_form">
-    <form method='post' action='signin.php'>
+  <form method='post' action='signin.php' id="signin_form">
 
-      <legend class="signup_legend">Log In</legend>
+    <fieldset class="legend_fieldset">
+      <h2 class="signup_legend">Log In</h2>
+    </fieldset>
 
-      <input type='text' name='login_input_email' placeholder='Email' />
-      <input type='password' name='login_input_password' placeholder='Password' />
-      <input type='submit' value='Submit' class='radius button' />
-      <a class="unlinked_button" id='signup_link' onclick='show_signup()'>Sign up now!</a>
-    </form>
-  </div>
+    <input type='text' name='login_input_email' placeholder='Email' />
+    <input type='password' name='login_input_password' placeholder='Password' />
+    <input type='submit' value='Submit' class='radius button' />
+    <a class="unlinked_button" id='signup_link' onclick='show_signup()'>Sign up now!</a>
+  </form>
 
-  <div id="signup_form">
+  <form action="signup.php" id="signup_form" class="signup_form" method="post" onsubmit="validateData()">
 
-    <form action="signup.php" class="signup_form" method="post" onsubmit="validateData()">
-
-      <legend class="signup_legend">Sign Up</legend>
-      
-      <div class="signup_section">
-        <input type="text" name="first_name" class="signup_input" maxlength="30" placeholder="First Name" />
-        <input type="text" name="last_name" class="signup_input" maxlength="30" placeholder="Last Name" />
-        <input type="text" name="email" class="signup_input" maxlength="50" placeholder="Email" />
-        <input type="password" name="password" class="signup_input" maxlength="20" placeholder="Password" />
-        <input type="text" name="address" class="signup_input" maxlength="30" placeholder="Address" />
-        <fieldset class="signup_fieldset">
-          <input type="text" name="city" class="signup_city" maxlength="20" placeholder="City" />
-          <select class="signup_state" name="state">
-            <option value="">State</option>
-            <option value="AL">AL</option>
-            <option value="Ak">AK</option>
-            <option value="AZ">AZ</option>
-            <option value="AR">AR</option>
-            <option value="CA">CA</option>
-            <option value="CO">CO</option>
-            <option value="CT">CT</option>
-            <option value="DE">DE</option>
-            <option value="FL">FL</option>
-            <option value="GA">GA</option>
-            <option value="HI">HI</option>
-            <option value="ID">ID</option>
-            <option value="IL">IL</option>
-            <option value="IN">IN</option>
-            <option value="IA">IA</option>
-            <option value="KS">KS</option>
-            <option value="KY">KY</option>
-            <option value="LA">LA</option>
-            <option value="ME">ME</option>
-            <option value="MD">MD</option>
-            <option value="MA">MA</option>
-            <option value="MI">MI</option>
-            <option value="MN">MN</option>
-            <option value="MS">MS</option>
-            <option value="MO">MO</option>
-            <option value="NE">NE</option>
-            <option value="NV">NV</option>
-            <option value="NH">NH</option>
-            <option value="NJ">NJ</option>
-            <option value="NM">NM</option>
-            <option value="NY">NY</option>
-            <option value="NC">NC</option>
-            <option value="ND">ND</option>
-            <option value="OH">OH</option>
-            <option value="OK">OK</option>
-            <option value="OR">OR</option>
-            <option value="PA">PA</option>
-            <option value="RI">RI</option>
-            <option value="SC">SC</option>
-            <option value="SD">SD</option>
-            <option value="TN">TN</option>
-            <option value="TX">TX</option>
-            <option value="UT">UT</option>
-            <option value="VT">VT</option>
-            <option value="VA">VA</option>
-            <option value="WA">WA</option>
-            <option value="WV">WV</option>
-            <option value="WI">WI</option>
-            <option value="WY">WY</option>
-          </select>
-          <input type="text" name="zip" class="signup_zip" maxlength="5" placeholder="Zip" />
-        </fieldset>
-      </div>
-      
-      <input type="submit" name="Submit" value="Submit" class="radius button" />
-      <a class="signup_cancel unlinked_button" onclick="hide_signup()">Cancel</a>
-    </form>
-  </div>
+    <fieldset class="legend_fieldset">
+      <h2 class="signup_legend">Sign Up</h2>
+    </fieldset>
+    
+    <div class="signup_section">
+      <input type="text" name="first_name" class="signup_input" maxlength="30" placeholder="First Name" />
+      <input type="text" name="last_name" class="signup_input" maxlength="30" placeholder="Last Name" />
+      <input type="text" name="email" class="signup_input" maxlength="50" placeholder="Email" />
+      <input type="password" name="password" class="signup_input" maxlength="20" placeholder="Password" />
+      <input type="text" name="address" class="signup_input" maxlength="30" placeholder="Address" />
+      <fieldset class="signup_fieldset">
+        <input type="text" name="city" class="signup_city" maxlength="20" placeholder="City" />
+        <select class="signup_state" name="state">
+          <option value="">State</option>
+          <option value="AL">AL</option>
+          <option value="Ak">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+        </select>
+        <input type="text" name="zip" class="signup_zip" maxlength="5" placeholder="Zip" />
+      </fieldset>
+    </div>
+    
+    <input type="submit" name="Submit" value="Submit" class="radius button" />
+    <a class="signup_cancel unlinked_button" onclick="hide_signup()">Cancel</a>
+  </form>
 
   <!-- End Header and Nav -->
 <?php?>

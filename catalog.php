@@ -83,8 +83,8 @@
                   <h5>$".$price."</h5>
                   <p>".$description."</p>
                   <div class='rating'>
-                    <a href='#'>".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
-                    <a href='#'>".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+                    <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
