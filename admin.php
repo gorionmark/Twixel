@@ -97,6 +97,8 @@
               </form>
             </li>
 
+
+
             <li id="deleteProductTab">
               <form action="delete.php" method="post" id="add_item_form">
                 <fieldset class="signup_fieldset">
@@ -135,15 +137,17 @@
               </form>
             </li>
 
+
+
             <li id="userAccountsTab">
 
-              <form name="select_user_update" action="select_user_update.php" method="post" id="add_item_form">
+              <form action="select_user_update.php" method="post" id="add_item_form">
                 <fieldset class="signup_fieldset">
                   <h1>User Accounts</h1>
                 </fieldset>
                 
-                <select name="selected_user" class="item_category" onchange="show_user_form()">
-                  <option value="">Select a User</option>
+                <select name="selected_user" class="item_category" onchange="this.form.submit()">
+                  <option value="" selected="selected">Select a User</option>
                   
                   <?php 
 
@@ -157,10 +161,10 @@
                     while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                     {
                         $id = $row['id'];
-                        $first_name = $row['first_name'];
-                        $last_name = $row['last_name'];
+                        $first_name_find = $row['first_name'];
+                        $last_name_find = $row['last_name'];
 
-                        print "<option value='".$id."''>".$first_name." ".$last_name."</option>";
+                        print "<option value='".$id."''>".$first_name_find." ".$last_name_find."</option>";
                     }
                   ?>
                 </select>
@@ -186,25 +190,25 @@
                   while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
                   {
                       $id = $row['id'];
-                      $first_name = $row['first_name'];
-                      $last_name = $row['last_name'];
-                      $email = $row['email'];
-                      $address = $row['address'];
-                      $city = $row['city'];
-                      $state = $row['state'];
-                      $zip = $row['zip'];
+                      $first_name_selected = $row['first_name'];
+                      $last_name_selected = $row['last_name'];
+                      $email_selected = $row['email'];
+                      $address_selected = $row['address'];
+                      $city_selected = $row['city'];
+                      $state_selected = $row['state'];
+                      $zip_selected = $row['zip'];
 
                   }
 
                    print " 
                       <input type='hidden' name='id' value='".$id."' />
-                      <input type='text' name='first_name' maxlength='100' value='".$first_name."' />
-                      <input type='text' name='last_name' value='".$last_name."' />
-                      <input type='text' name='email' value='".$email."' />
-                      <input type='text' name='address' value='".$address."' />
-                      <input type='text' name='city'  value='".$city."' />
-                      <input type='text' name='state' maxlength='100' value='".$state."' />
-                      <input type='text' name='zip' maxlength='5' value='".$zip."' />
+                      <input type='text' name='first_name' maxlength='100' value='".$first_name_selected."' />
+                      <input type='text' name='last_name' value='".$last_name_selected."' />
+                      <input type='text' name='email' value='".$email_selected."' />
+                      <input type='text' name='address' value='".$address_selected."' />
+                      <input type='text' name='city'  value='".$city_selected."' />
+                      <input type='text' name='state' maxlength='100' value='".$state_selected."' />
+                      <input type='text' name='zip' maxlength='5' value='".$zip_selected."' />
                     ";
                 ?>
                   
