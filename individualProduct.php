@@ -1,9 +1,43 @@
-<?php include 'includes/header.php';?>
+<?php 
+  session_start();
+  
+  include 'includes/header.php';
+
+  $dbhost = 'localhost';
+  $dbuser = 'gr073607';
+  $dbpass = 'knights123!';
+
+  $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+  if(! $conn ){
+    die('Could not connect: ' . mysql_error());
+  }
+
+  $product_id = $_POST['product_id'];
+
+  $sql = "SELECT * FROM products WHERE id='$product_id'";
+
+  $retval = mysql_query( $sql, $conn );
+  if(! $retval ){
+    die('Could not get data: ' . mysql_error());
+  }
+  while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+  {
+      $name = $row['name'];
+      $description = $row['description'];
+      $category = $row['category'];
+      $stock = $row['stock'];
+      $price = $row['price'];
+      $image = $row['image'];
+      $thumbs_up = $row['thumbs_up'];
+      $thumbs_down = $row['thumbs_down'];
+  }
+
+?>
 
   <!-- End Header and Nav -->
   <div class="spacer"></div>
   <div class="row">
-    <h1>Product Name</h1>
+    <h1><?php print $name; ?></h1>
   </div>
 
   <div class="row">

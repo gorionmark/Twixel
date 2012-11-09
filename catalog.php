@@ -12,7 +12,7 @@
       <hr />
     </div>
     <div class="three columns">
-      <input class="search" type="search" placeholder="Search..." />
+      <?php include('includes/searchform.php'); ?>
     </div>
   </div>
   <div class="row">
@@ -78,11 +78,16 @@
                 print "
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
-                  <a href='individualProduct.php'><h4>".$name."</h4></a>
+                  <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+
+                    <form action='individualProduct.php' method='post'>
+                      <input type='hidden' name='product_id' value='".$id."' />
+                      <input type='submit' name='submit' value='View Item' class='radius button' />
+                    </form>
                   </div>
                 </div>";
 
