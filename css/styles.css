@@ -712,10 +712,12 @@ input[type=search] {
   margin-bottom:15px;
 }
 
-#edit_user_form {
-  
+.catalog_border {
+  border-bottom:1px solid #222222;
+  opacity: 0.2;
 }
 
-#delete_user_form {
-
+.catalog_spacer {
+  margin-top:20px;
+  margin-bottom:20px;
 }

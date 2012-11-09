@@ -42,6 +42,7 @@
       </dl>
 
       <ul class="tabs-content">
+
         <li class="active" id="adobePluginsTab">
 
           <?php
@@ -64,7 +65,6 @@
             {
                 $id = $row['id'];
                 $name = $row['name'];
-                $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
                 $thumbs_up = $row['thumbs_up'];
@@ -78,10 +78,8 @@
                 print "
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
-                  <h4>".$name."</h4>
-                  <a href='#' class='radius button right'>Add to Cart</a>
+                  <a href='individualProduct.php'><h4>".$name."</h4></a>
                   <h5>$".$price."</h5>
-                  <p>".$description."</p>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
@@ -92,7 +90,7 @@
 
               if($counter == 3) 
               {
-                print "</div>";
+                print "</div> <div class='catalog_border catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -110,10 +108,12 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $id = $row['id'];
                 $name = $row['name'];
-                $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
+                $thumbs_up = $row['thumbs_up'];
+                $thumbs_down = $row['thumbs_down'];
 
                 if($counter == 0)
                 {
@@ -124,12 +124,10 @@
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
-                  <a href='#' class='radius button right'>Add to Cart</a>
                   <h5>$".$price."</h5>
-                  <p>".$description."</p>
                   <div class='rating'>
-                    0<i class='foundicon-thumb-up'></i>
-                    0<i class='foundicon-thumb-down'></i>
+                    <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
@@ -137,7 +135,7 @@
 
               if($counter == 3) 
               {
-                print "</div>";
+                print "</div> <div class='catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -155,10 +153,12 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $id = $row['id'];
                 $name = $row['name'];
-                $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
+                $thumbs_up = $row['thumbs_up'];
+                $thumbs_down = $row['thumbs_down'];
 
                 if($counter == 0)
                 {
@@ -169,12 +169,10 @@
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
-                  <a href='#' class='radius button right'>Add to Cart</a>
                   <h5>$".$price."</h5>
-                  <p>".$description."</p>
                   <div class='rating'>
-                    0<i class='foundicon-thumb-up'></i>
-                    0<i class='foundicon-thumb-down'></i>
+                    <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
@@ -182,7 +180,7 @@
 
               if($counter == 3) 
               {
-                print "</div>";
+                print "</div> <div class='catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -199,10 +197,12 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $id = $row['id'];
                 $name = $row['name'];
-                $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
+                $thumbs_up = $row['thumbs_up'];
+                $thumbs_down = $row['thumbs_down'];
 
                 if($counter == 0)
                 {
@@ -213,12 +213,10 @@
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
-                  <a href='#' class='radius button right'>Add to Cart</a>
                   <h5>$".$price."</h5>
-                  <p>".$description."</p>
                   <div class='rating'>
-                    0<i class='foundicon-thumb-up'></i>
-                    0<i class='foundicon-thumb-down'></i>
+                    <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
@@ -226,7 +224,7 @@
 
               if($counter == 3) 
               {
-                print "</div>";
+                print "</div> <div class='catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -243,10 +241,12 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $id = $row['id'];
                 $name = $row['name'];
-                $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
+                $thumbs_up = $row['thumbs_up'];
+                $thumbs_down = $row['thumbs_down'];
 
                 if($counter == 0)
                 {
@@ -257,12 +257,10 @@
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
-                  <a href='#' class='radius button right'>Add to Cart</a>
                   <h5>$".$price."</h5>
-                  <p>".$description."</p>
                   <div class='rating'>
-                    0<i class='foundicon-thumb-up'></i>
-                    0<i class='foundicon-thumb-down'></i>
+                    <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
@@ -270,7 +268,7 @@
 
               if($counter == 3) 
               {
-                print "</div>";
+                print "</div> <div class='catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -287,10 +285,12 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $id = $row['id'];
                 $name = $row['name'];
-                $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
+                $thumbs_up = $row['thumbs_up'];
+                $thumbs_down = $row['thumbs_down'];
 
                 if($counter == 0)
                 {
@@ -301,12 +301,10 @@
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
-                  <a href='#' class='radius button right'>Add to Cart</a>
                   <h5>$".$price."</h5>
-                  <p>".$description."</p>
                   <div class='rating'>
-                    0<i class='foundicon-thumb-up'></i>
-                    0<i class='foundicon-thumb-down'></i>
+                    <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
@@ -314,7 +312,7 @@
 
               if($counter == 3) 
               {
-                print "</div>";
+                print "</div> <div class='catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -331,10 +329,12 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $id = $row['id'];
                 $name = $row['name'];
-                $description = $row['description'];
                 $price = $row['price'];
                 $image = $row['image'];
+                $thumbs_up = $row['thumbs_up'];
+                $thumbs_down = $row['thumbs_down'];
 
                 if($counter == 0)
                 {
@@ -345,12 +345,10 @@
                 <div class='four columns catalog_items'>
                   <img src='".$image."' width='400' height='300' alt='".$name."' />
                   <h4>".$name."</h4>
-                  <a href='#' class='radius button right'>Add to Cart</a>
                   <h5>$".$price."</h5>
-                  <p>".$description."</p>
                   <div class='rating'>
-                    0<i class='foundicon-thumb-up'></i>
-                    0<i class='foundicon-thumb-down'></i>
+                    <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
+                    <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
                   </div>
                 </div>";
 
@@ -358,7 +356,7 @@
 
               if($counter == 3) 
               {
-                print "</div>";
+                print "</div> <div class='catalog_spacer'></div>";
                 $counter = 0;
               }
             }
