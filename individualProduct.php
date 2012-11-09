@@ -1,16 +1,6 @@
-<?php 
-  session_start();
+<?php
   
   include 'includes/header.php';
-
-  $dbhost = 'localhost';
-  $dbuser = 'gr073607';
-  $dbpass = 'knights123!';
-
-  $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-  if(! $conn ){
-    die('Could not connect: ' . mysql_error());
-  }
 
   $reason_for_visiting = $_SESSION['product_page'];
 
@@ -26,7 +16,7 @@
     $sql = "SELECT * FROM products WHERE name='$product_name'"; 
   }
 
-  $retval = mysql_query( $sql, $conn );
+  $retval = mysql_query( $sql, $connection );
   if(! $retval ){
     die('Could not get data: ' . mysql_error());
   }
@@ -57,11 +47,10 @@
     <div class="four columns panel">
       <h2>Stock: <?php print $stock; ?></h2>
       <h2>$<?php print $price; ?></h2>
-      <a href="#">
       <div class="panel callout radius" align="center">
-        <h4>Add to Cart</h4>
+        <!-- <h4>Add to Cart</h4> -->
+        <a class="added" href="cart.php?action=add&id=<?php echo $product_id; ?> ">Add to Cart</a>
       </div>
-      </a>
       <?php
       print "
       <div class='rating'>
@@ -115,3 +104,5 @@
   </script>
   
 </body>
+
+?>
