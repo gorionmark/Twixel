@@ -76,7 +76,7 @@
 
                 print "
                 <div class='four columns catalog_items'>
-                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <img src='".$image."' alt='".$name."' class='product_images' />
                   <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
@@ -112,6 +112,7 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $_SESSION['product_page'] = 'view_product';
                 $id = $row['id'];
                 $name = $row['name'];
                 $price = $row['price'];
@@ -126,12 +127,17 @@
 
                 print "
                 <div class='four columns catalog_items'>
-                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <img src='".$image."' alt='".$name."' class='product_images' />
                   <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+
+                    <form action='individualProduct.php' method='post'>
+                      <input type='hidden' name='product_id' value='".$id."' />
+                      <input type='submit' name='submit' value='View Item' class='radius button' />
+                    </form>
                   </div>
                 </div>";
 
@@ -139,7 +145,7 @@
 
               if($counter == 3) 
               {
-                print "</div> <div class='catalog_spacer'></div>";
+                print "</div> <div class='catalog_border catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -157,6 +163,7 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $_SESSION['product_page'] = 'view_product';
                 $id = $row['id'];
                 $name = $row['name'];
                 $price = $row['price'];
@@ -171,12 +178,17 @@
 
                 print "
                 <div class='four columns catalog_items'>
-                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <img src='".$image."' alt='".$name."' class='product_images' />
                   <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+
+                    <form action='individualProduct.php' method='post'>
+                      <input type='hidden' name='product_id' value='".$id."' />
+                      <input type='submit' name='submit' value='View Item' class='radius button' />
+                    </form>
                   </div>
                 </div>";
 
@@ -184,7 +196,7 @@
 
               if($counter == 3) 
               {
-                print "</div> <div class='catalog_spacer'></div>";
+                print "</div> <div class='catalog_border catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -201,6 +213,7 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $_SESSION['product_page'] = 'view_product';
                 $id = $row['id'];
                 $name = $row['name'];
                 $price = $row['price'];
@@ -215,12 +228,17 @@
 
                 print "
                 <div class='four columns catalog_items'>
-                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <img src='".$image."' alt='".$name."' class='product_images' />
                   <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+
+                    <form action='individualProduct.php' method='post'>
+                      <input type='hidden' name='product_id' value='".$id."' />
+                      <input type='submit' name='submit' value='View Item' class='radius button' />
+                    </form>
                   </div>
                 </div>";
 
@@ -228,7 +246,7 @@
 
               if($counter == 3) 
               {
-                print "</div> <div class='catalog_spacer'></div>";
+                print "</div> <div class='catalog_border catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -245,6 +263,7 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $_SESSION['product_page'] = 'view_product';
                 $id = $row['id'];
                 $name = $row['name'];
                 $price = $row['price'];
@@ -259,12 +278,17 @@
 
                 print "
                 <div class='four columns catalog_items'>
-                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <img src='".$image."' alt='".$name."' class='product_images' />
                   <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+
+                    <form action='individualProduct.php' method='post'>
+                      <input type='hidden' name='product_id' value='".$id."' />
+                      <input type='submit' name='submit' value='View Item' class='radius button' />
+                    </form>
                   </div>
                 </div>";
 
@@ -272,7 +296,7 @@
 
               if($counter == 3) 
               {
-                print "</div> <div class='catalog_spacer'></div>";
+                print "</div> <div class='catalog_border catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -289,6 +313,7 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $_SESSION['product_page'] = 'view_product';
                 $id = $row['id'];
                 $name = $row['name'];
                 $price = $row['price'];
@@ -303,12 +328,17 @@
 
                 print "
                 <div class='four columns catalog_items'>
-                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <img src='".$image."' alt='".$name."' class='product_images' />
                   <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+
+                    <form action='individualProduct.php' method='post'>
+                      <input type='hidden' name='product_id' value='".$id."' />
+                      <input type='submit' name='submit' value='View Item' class='radius button' />
+                    </form>
                   </div>
                 </div>";
 
@@ -316,7 +346,7 @@
 
               if($counter == 3) 
               {
-                print "</div> <div class='catalog_spacer'></div>";
+                print "</div> <div class='catalog_border catalog_spacer'></div>";
                 $counter = 0;
               }
             }
@@ -333,6 +363,7 @@
             }
             while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
             {
+                $_SESSION['product_page'] = 'view_product';
                 $id = $row['id'];
                 $name = $row['name'];
                 $price = $row['price'];
@@ -347,12 +378,17 @@
 
                 print "
                 <div class='four columns catalog_items'>
-                  <img src='".$image."' width='400' height='300' alt='".$name."' />
+                  <img src='".$image."' alt='".$name."' class='product_images' />
                   <h4>".$name."</h4>
                   <h5>$".$price."</h5>
                   <div class='rating'>
                     <a class='unlinked_button' >".$thumbs_up."<i class='foundicon-thumb-up'></i></a>
                     <a class='unlinked_button' >".$thumbs_down."<i class='foundicon-thumb-down'></i></a>
+
+                    <form action='individualProduct.php' method='post'>
+                      <input type='hidden' name='product_id' value='".$id."' />
+                      <input type='submit' name='submit' value='View Item' class='radius button' />
+                    </form>
                   </div>
                 </div>";
 
@@ -360,7 +396,7 @@
 
               if($counter == 3) 
               {
-                print "</div> <div class='catalog_spacer'></div>";
+                print "</div> <div class='catalog_border catalog_spacer'></div>";
                 $counter = 0;
               }
             }
