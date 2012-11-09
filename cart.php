@@ -2,50 +2,57 @@
   include 'includes/header.php';
 ?>
 
-  <!-- First Band (Slider) -->
-  <!-- The Orbit slider is initialized at the bottom of the page by calling .orbit() on #slider -->
   <div class="spacer"></div>
   <div class="row">
-    <div class="nine columns">
+    <div class="twelve columns">
       <h1>Shopping Cart</h1>
       <hr />
-    </div>
-    <div class="three columns">
-      <input class="search" type="search" placeholder="Search..." />
     </div>
   </div>
     
   <div class="row">
-    <div class="nine columns">
-      <h4>Your Shopping Cart is empty</h4>
-      <p>Your Shopping Cart is here anytime you need it. Why not fill it with some of our awesome products.
-      <p>Head over to our <a href="catalog.php">Products Page</a> and make it so your shopping cart isn't lonely.</p>
-      <a href="checkout.php" class="radius button right">Checkout</a>
-    </div>
-    <div class="three columns">
-      <p>
-        <a href="#"><img src="http://lorempixel.com/400/280/fashion/" alt="flareAd" /></a>
-      </p>
-      <p>
-        <a href="#"><img src="http://lorempixel.com/400/280/sports/" alt="particlesAd" /></a>
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="panel">
-        <h4>Stay up to date!</h4>
-            
-        <div class="row">
-          <div class="nine columns">
-            <p>Sign-up for our email list to receive information about deals, coupons, and updates about Twixel. Max 4 emails per month.</p>
-          </div>
-          <div class="three columns">
-            <a href="#" class="radius button right">Sign-up</a>
-          </div>
+      <div class="eight column">
+        <div class="entry">
+          <h3>Your Cart</h3>
+          <br/>
+          <p>Remove items from your cart or Check Out.</p>
+          
+          <table>
+            <tr>
+              <td class="title">Name</td>
+              <td class="title">Author</td>
+              <td class="title">Price</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>TRIM</td>
+              <td>ElegantThemes</td>
+              <td>$9</td>
+              <td><a href="" title=""><span>&nbsp;-&nbsp;</span>Remove</a></td>
+            </tr>
+            <tr>
+              <td>MyProduct</td>
+              <td>ElegantThemes</td>
+              <td>$9</td>
+              <td><a href="" title=""><span>&nbsp;-&nbsp;</span>Remove</a></td>
+            </tr>
+          </table>
+          <br />
+          <p>
+            <a class="feature-buy" href="pay.php" title="">Check Out</a> or
+            <a href="catalog.php" title="">Continue Shopping</a>
+          </p>
+
+
         </div>
+        </div>
+    <!-- beginning of sidebar -->
+      <div class="four column">
+
+        <?php include "includes/sidebar.php"; ?>
+
       </div>
   </div>
-  
   
   <!-- Footer -->
   <?php include('footer.php') ?>
