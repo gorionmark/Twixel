@@ -3,13 +3,10 @@
 ?>
     <div class="spacer"></div>
     <div class="row">
-      <div class="nine columns">
+      <div class="twelve columns">
         <h1>Home</h1>
         <h2>Welcome to Twixel Creative and Media</h2>
         <hr />
-      </div>
-      <div class="three columns">
-        <?php include('includes/searchform.php'); ?>
       </div>
     </div>
     <div class="row">
