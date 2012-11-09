@@ -6,26 +6,14 @@ function downvoteItem($id) {
     
 }
 
-function show_signin() {
-
-	if(document.getElementById("signin_form").style.visibility == 'visible')
-	{
-		document.getElementById("signin_form").style.visibility = 'hidden';
-	}
-	else {
-		document.getElementById("signin_form").style.visibility = 'visible';
-	}
-	
-	document.getElementById("signup_form").style.visibility = 'hidden';
-}
-
 function show_signup() {
 	document.getElementById("signup_form").style.visibility = 'visible';
-	document.getElementById("signin_form").style.visibility = 'hidden';
+	document.getElementById("signin").style.visibility = 'hidden';
 }
 
 function hide_signup() {
 	document.getElementById("signup_form").style.visibility = 'hidden';
+	document.getElementById("signin").style.visibility = 'visible';
 }
 
 function validateData(name) {

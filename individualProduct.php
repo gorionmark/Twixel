@@ -12,9 +12,19 @@
     die('Could not connect: ' . mysql_error());
   }
 
-  $product_id = $_POST['product_id'];
+  $reason_for_visiting = $_SESSION['product_page'];
 
-  $sql = "SELECT * FROM products WHERE id='$product_id'";
+  if($reason_for_visiting == "view_product")
+  {
+    $product_id = $_POST['product_id'];
+    $sql = "SELECT * FROM products WHERE id='$product_id'";
+  }
+  else if($reason_for_visiting == "search")
+  {
+    $_SESSION['product_page'] = 'view_product';
+    $product_name = $_POST['search'];
+    $sql = "SELECT * FROM products WHERE name='$product_name'"; 
+  }
 
   $retval = mysql_query( $sql, $conn );
   if(! $retval ){
