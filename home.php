@@ -4,13 +4,7 @@
     <div class="spacer"></div>
     <div class="row">
       <div class="twelve columns">
-        <h1>Home</h1>
-        <h2>Welcome to Twixel Creative and Media</h2>
-        <hr />
-      </div>
-    </div>
-    <div class="row">
-      <div class="twelve columns">
+        <h1>Welcome to Twixel Creative and Media</h1>
         <h3>This Month's Featured Plugins</h3>
       </div>
     </div>
@@ -39,6 +33,7 @@
             }
             mysql_close($conn);
           ?>
+          <hr />
         </div>
         
       </div>
@@ -95,7 +90,7 @@
           Hey Dev Team, what's up? Come by my office and say, "Hello."</p>
         <p><em>Posted: 21 Sept 2012 @ 13:31</em></p>
       </div>
-      
+      <hr />
     </div>
     
     
@@ -122,50 +117,3 @@
     
     <!-- Footer -->
     <?php include('footer.php') ?>
-    
-    <!-- Included JS Files (Uncompressed) -->
-    <!--
-    
-    <script src="js/jquery.js"></script>
-    
-    <script src="js/jquery.foundation.mediaQueryToggle.js"></script>
-    
-    <script src="js/jquery.foundation.forms.js"></script>
-    
-    <script src="js/jquery.foundation.reveal.js"></script>
-    
-    <script src="js/jquery.foundation.orbit.js"></script>
-    
-    <script src="js/jquery.foundation.navigation.js"></script>
-    
-    <script src="js/jquery.foundation.buttons.js"></script>
-    
-    <script src="js/jquery.foundation.tabs.js"></script>
-    
-    <script src="js/jquery.foundation.tooltips.js"></script>
-    
-    <script src="js/jquery.foundation.accordion.js"></script>
-    
-    <script src="js/jquery.placeholder.js"></script>
-    
-    <script src="js/jquery.foundation.alerts.js"></script>
-    
-    <script src="js/jquery.foundation.topbar.js"></script>
-    
-    -->
-    
-    <!-- Included JS Files (Compressed) -->
-    <script src="js/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    
-    <!-- Initialize JS Plugins -->
-    <script src="js/app.js"></script>
-
-    <script type="text/javascript">
-       $(window).load(function() {
-           $('#slider').orbit();
-       });
-    </script>
-    
-  </body>
-</html>
