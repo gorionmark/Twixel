@@ -638,19 +638,16 @@
   text-align: right;
 }
 
-
-body {
-  background-image: url('../img/bgnoise_lg.png');
-  /* background-image: url('../img/clean_textile.png'); */
-  /* background-color: #FFFFF1; */
-}
-
 /* Base Type Styles Using Modular Scale ---------------------- */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td { 
   margin: 0; 
   padding: 0; 
   font-size: 14px; 
   direction: ltr; 
+}
+
+body {
+  background-image: url('../img/bgnoise_lg.png');
 }
 
 p { 
@@ -787,10 +784,10 @@ input[type=search] {
 }
 
 .top-bar {
-  height:auto;
   position:fixed;
   top:0;
   z-index: 10000;
+  height:auto;
 }
 
 .top-bar ul {
@@ -814,23 +811,15 @@ input[type=search] {
 }
 
 .spacer {
-  margin-bottom:85px;
+  float:right;
+  height:75px;
+  width:100%;
 }
 
 .unlinked_button {
   cursor: pointer;
 }
 
-#signin_form {
-  visibility:hidden;
-  width:250px;
-  padding:5px 20px 10px 10px;
-  background:#222222;
-  position:fixed;
-  right:0;
-  top:64px;
-  z-index:1000;
-}
 #signin {
   margin: auto;
   width:400px;
@@ -866,13 +855,9 @@ input[type=search] {
 
 #signup_form {
   visibility: hidden;
-  background-color:#222222;
+  margin: auto;
+  width:400px;
   padding:5px 20px 10px 10px;
-  width:350px;
-  position:fixed;
-  right:0;
-  top:64px;
-  z-index:1000;
 }
 
 .signup_input {
@@ -930,4 +915,34 @@ input[type=search] {
 
 .product_images {
   text-align:center;
+}
+
+.clear {
+  clear:both;
+}
+
+
+@media only screen and (max-width: 940px){
+  .top-bar ul.left > li, .top-bar ul.right > li {
+    display: inline-block;
+    margin: 0 !important;
+
+  }
+
+  .right {
+    float: right;
+  }
+
+  .left {
+    float:left;
+  }
+}
+
+@media only screen and (max-width:505px) {
+  .spacer {
+    height:131px;
+  }
+  .top-bar ul.right {
+    width:100%;
+  }
 }
