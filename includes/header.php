@@ -44,6 +44,7 @@ include('includes/mysql_connect.php');
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
+  <!--  -->
   <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -65,7 +66,7 @@ include('includes/mysql_connect.php');
   
   <nav class="top-bar">
     
-      <a class="logo left" href="home.php" title="Twixel">
+      <a class="logo three column" href="home.php" title="Twixel">
         <img src="img/logo-b.png" alt="Twixel"/>
       </a>
 
